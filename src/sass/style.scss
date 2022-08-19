@@ -1,0 +1,184 @@
+@use "./utilities" as *;
+@use "base";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(../images/pattern-background-desktop.svg);
+  background-color: $Pale-blue;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.main {
+  background-color: $White;
+  max-width: toRem(450);
+  border-radius: toRem(22);
+  overflow: hidden;
+}
+
+.card {
+  &-logo {
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &-wrapper {
+    padding: toRem(50) toRem(48) toRem(52) toRem(48);
+  }
+
+  &-text {
+    text-align: center;
+
+    h1 {
+      margin-bottom: toRem(26);
+      color: $Dark-blue;
+      font-weight: $FW900;
+    }
+
+    p {
+      margin-bottom: toRem(27);
+      color: $Desaturated-blue;
+      line-height: 1.6;
+      font-weight: $FW500;
+    }
+  }
+
+  &-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: toRem(23) toRem(21) toRem(23) toRem(21);
+    background-color: $Very-pale-blue;
+    border-radius: toRem(12);
+    overflow: hidden;
+
+    &__icon {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+
+      h2 {
+        color: $Dark-blue;
+        font-weight: $FW900;
+        font-size: 1.05rem;
+
+        span {
+          font-size: 1rem;
+          font-weight: $FW700;
+          color: $Desaturated-blue;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  &-change {
+    color: $Bright-blue;
+    font-weight: $FW900;
+    transition: all 0.4s;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.7;
+    }
+  }
+
+  &-proceed {
+    display: block;
+    margin-top: toRem(32);
+    margin-bottom: toRem(32);
+    padding: toRem(19) 0;
+    background: $Bright-blue;
+    color: $Very-pale-blue;
+    text-decoration: none;
+    text-align: center;
+    font-weight: $FW700;
+    border-radius: toRem(12);
+    box-shadow: 0px 5px 30px 10px $Pale-blue;
+    transition: all 0.5s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &-cancel {
+    display: block;
+    color: $Desaturated-blue;
+    font-weight: $FW700;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s;
+
+    &:hover {
+      color: $Dark-blue;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-image: url(/public/images/pattern-background-mobile.svg);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main {
+    width: 87.5vw;
+  }
+
+  .card {
+    &-wrapper {
+      padding: toRem(38) toRem(22) toRem(36) toRem(22);
+    }
+
+    &-text {
+      padding: 0 toRem(18);
+      text-align: center;
+
+      h1 {
+        font-size: toRem(23);
+        margin-bottom: toRem(24);
+      }
+
+      p {
+        font-size: toRem(15);
+        margin-bottom: toRem(24);
+      }
+    }
+
+    &-price {
+      padding: toRem(16) toRem(15);
+
+      &__icon {
+        h2 {
+          font-size: toRem(15);
+
+          span {
+            font-size: toRem(14);
+          }
+        }
+      }
+    }
+  }
+
+  .btn {
+    &-change {
+      font-size: toRem(14);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 85vw;
+  }
+}
