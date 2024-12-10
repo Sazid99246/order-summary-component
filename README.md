@@ -25,7 +25,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Source Code](https://github.com/Sazid99246/order-summary-component)
-- Live Site URL: [Add live site URL here](https://sazid99246.github.io/order-summary-component/)
+- Live Site URL: [Order Summary Component](https://sazid99246.github.io/order-summary-component/)
 
 ## Author
 
